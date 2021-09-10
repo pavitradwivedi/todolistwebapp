@@ -1,0 +1,38 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+
+<body>
+ 
+<div class="box" id="heading">
+  <h> <%= listtitle %></h>
+</div>
+  
+<div class="box">
+ 
+ <% for(var i=0; i<newitem.length; i++)    
+      {%>
+        <div class="item"> 
+         <input type="checkbox">
+         <p><%= newitem[i] %></p>
+        </div> 
+       <%} %>
+        
+    
+    <form  class="item" action="/" method="post">
+      <input type="text" name="listitem" placeholder="New Item">
+      <button type="submit" name="list" value=<%= listtitle %>>+</button>
+    </form>
+   </div>
+
+   <footer>Copyright 2021 Created By Pavitra Dwivedi</footer>
+  
+  </body>
+</html>
